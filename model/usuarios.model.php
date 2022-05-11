@@ -17,8 +17,7 @@
 		static public function MdlMostrarUsuarios($tabla, $item, $valor)
 		{
 			# code...
-
-
+			
 			$stmt = Connection::connectionBd()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
 			
 

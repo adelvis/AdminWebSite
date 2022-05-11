@@ -356,13 +356,15 @@ if(isset($_POST['short_Description'])){
 
     $addCategory-> blockType = $_POST["type"];
 
-    $addCategory-> imgNew = $_FILES['img'];
+    if(isset($_FILES['img'])){
+        $addCategory-> imgNew = $_FILES['img'];
+    }
 
-    $addCategory-> imgOld = $_POST['icono'];
+    if(isset($_POST['icono'])){
+        $addCategory-> imgOld = $_POST['icono'];
+    }    
 
     $addCategory->ajaxAddCategory();
-
-
 
 }
 
@@ -381,7 +383,10 @@ if(isset($_POST['id_categotyEdit'])){
 
     $updateCategory-> blockType = $_POST["type"];
 
-    $updateCategory-> imgNew = $_FILES['img'];
+    if(isset($_FILES['img'])){
+        $updateCategory-> imgNew = $_FILES['img'];
+    }
+    
 
     $updateCategory-> imgOld = $_POST['imgOld'];
 
@@ -403,7 +408,9 @@ if(isset($_POST['idCatDelete'])){
 
     $deleteCategory ->idCatDelete= $_POST['idCatDelete'];
     
-    $deleteCategory-> blockType = $_POST["type"];
+    if(isset($_POST["type"])){
+        $deleteCategory-> blockType = $_POST["type"];
+    }    
 
     $deleteCategory-> imgOld = $_POST['imgPrincipal'];   
 

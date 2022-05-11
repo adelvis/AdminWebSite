@@ -620,7 +620,7 @@ MODAL EDITAR CARACTERISTICAS
                   <div class="form-group" id="loadImagen">
 
                     <label>Cambiar Icono:</label>
-                    
+
                       <ul class="grid0" >
                           <?php
 
@@ -633,9 +633,7 @@ MODAL EDITAR CARACTERISTICAS
 
                               foreach ($icons as $key => $value) {
                                 # code...
-                                
-
-                                echo '<li class="col-md-3 col-sm-6 col-xs-12 iconSelecionado" code="'.$value['code'].'">'.$value['icon'].'</li>';
+                                 echo '<li class="col-md-3 col-sm-6 col-xs-12 iconSelecionado" code="'.$value['code'].'">'.$value['icon'].'</li>';
 
                               }
 
@@ -643,12 +641,7 @@ MODAL EDITAR CARACTERISTICAS
 
                           ?>
 
-                          <!--<pre>
-                            
-                           <?php // var_dump($icons); ?>
-                          </pre> -->
-                                               
-
+                          
 
                       </ul>
 
